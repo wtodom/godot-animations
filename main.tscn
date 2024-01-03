@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bek83u2lhvoc4"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_qlmnt"]
+[ext_resource type="PackedScene" uid="uid://co5n56rtnnsu8" path="res://east_boundary.tscn" id="2_ytycv"]
+[ext_resource type="PackedScene" uid="uid://db6o0hexqi02c" path="res://circle.tscn" id="3_g5all"]
+[ext_resource type="PackedScene" uid="uid://if2spuuku5if" path="res://west_boundary.tscn" id="3_wvl0i"]
+[ext_resource type="PackedScene" uid="uid://cq75aarrf2j3j" path="res://south_boundary.tscn" id="4_u1hno"]
+[ext_resource type="PackedScene" uid="uid://bd1d51bh7un6h" path="res://north_boundary.tscn" id="5_8qryi"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_qlmnt")
+circle_scene = ExtResource("3_g5all")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 540.0
+offset_bottom = 960.0
+color = Color(0.247059, 0.247059, 0.247059, 1)
+
+[node name="EastBoundary" parent="." instance=ExtResource("2_ytycv")]
+
+[node name="WestBoundary" parent="." instance=ExtResource("3_wvl0i")]
+
+[node name="SouthBoundary" parent="." instance=ExtResource("4_u1hno")]
+
+[node name="NorthBoundary" parent="." instance=ExtResource("5_8qryi")]
